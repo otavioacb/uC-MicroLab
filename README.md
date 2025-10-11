@@ -10,8 +10,8 @@ Note: The board follows the Arduino R3 header standard. Actual pin assignments a
 </p>
 
 ## Project Status
-- Current Hardware Revision: **R1** (stable)
-- Next Planned Revision: R1.1 (mechanical tweaks and improved decoupling)
+- Current Hardware Revision: **r1** (stable)
+- Next Planned Revision: r1.1 (mechanical tweaks and improved decoupling)
 - Firmware/Drivers: early stage; no tested examples published yet
 
 ## Key Features
@@ -29,7 +29,7 @@ Note: The board follows the Arduino R3 header standard. Actual pin assignments a
 ## Repository Structure (Summary)
 
 ```
-hardware/         → PCB revisions (R1, R1.1, …) and fabrication artifacts
+hardware/         → PCB revisions (r1, r1.1, …) and fabrication artifacts
 firmware/         → Reusable code and per‑platform adaptations
 examples/         → Example projects (to be added)
 docs/             → Technical docs, pinout notes, API, compliance
@@ -43,7 +43,7 @@ docs/             → Technical docs, pinout notes, API, compliance
    ```
 2. Open the desired hardware revision:
    ```bash
-   cd uC-MicroLab/hardware/R1
+   cd uC-MicroLab/hardware/r1
    ```
 3. Review the fabrication bundle in `fabrication_bundle/` for manufacturing.
 
@@ -51,7 +51,7 @@ Examples are not yet available. They will be added once validated on real hardwa
 
 ## Pinout (Summary)
 
-Full pinout and mechanical details: [docs/hardware/R1.md](docs/hardware/R1.md)
+Full pinout and mechanical details: [docs/hardware/r1/uc-schematic-r1.pdf](docs/hardware/r1/uc-schematic-r1.pdf)
 
 ## Examples
 
@@ -66,8 +66,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for:
 
 ## Roadmap (Summary)
 
-- R1.1: Silkscreen adjustments; improve USB‑area clearance
-- R2: Add CAN interface + partial isolation
+- r1.1: Silkscreen adjustments; improve USB‑area clearance
+- r2: Add CAN interface + partial isolation
 - Firmware 1.1.0: Host board auto‑detection abstraction
 
 ## Licenses
@@ -84,4 +84,5 @@ If you reuse this design, keep the license notice and reference to the original 
 
 - Author/Maintainer: Otávio ([@otavioacb](https://github.com/otavioacb))
 - Issues: please use the appropriate template under “New Issue”
+
 
