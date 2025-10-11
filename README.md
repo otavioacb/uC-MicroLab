@@ -4,8 +4,10 @@ Open Hardware shield for integrating diverse microcontroller boards (Arduino, ST
 
 Note: The board follows the Arduino R3 header standard. Actual pin assignments and voltage levels depend on the host board you use.
 
-![Render Top](hardware/R1/images/render-top.png)  
-![Render Bottom](hardware/R1/images/render-bottom.png)
+<p align="center">
+  <img src="docs/img/r1/top-layer.png" alt="Render Top" width="400"/>
+  <img src="docs/img/r1/bottom-layer.png" alt="Render Bottom" width="400"/>
+</p>
 
 ## Project Status
 - Current Hardware Revision: **R1** (stable)
@@ -82,3 +84,4 @@ If you reuse this design, keep the license notice and reference to the original 
 
 - Author/Maintainer: Otávio ([@otavioacb](https://github.com/otavioacb))
 - Issues: please use the appropriate template under “New Issue”
+
