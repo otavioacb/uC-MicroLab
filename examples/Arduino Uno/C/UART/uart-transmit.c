@@ -7,7 +7,7 @@
     The program initializes the UART at 9600 baud and sends a single byte (0x0F)
     every second. This file demonstrates the expected calls:
       - HAL_UART_Init(unsigned long baud);
-      - HAL_UART_Transmit(uint8_t data);
+      - HAL_UART_Transmit(unsigned char data);
 
   Hardware: uc-Microlab — version r1
   Target MCU: ATmega328P (Arduino Uno compatible)
@@ -43,4 +43,5 @@ int main(void)
 		HAL_UART_Transmit(0x0F);
 		_delay_ms(1000);
     }
+
 }
