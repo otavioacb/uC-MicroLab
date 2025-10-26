@@ -1,10 +1,10 @@
 /*
- * uc-Microlab — UART HAL (header comment)
+ * uc-Microlab â€” UART HAL (header comment)
  * File: uart-hal.h / uart-hal.c
  *
  * Project: uc-Microlab
  * Component: UART Hardware Abstraction Layer (HAL)
- * Hardware: uc-Microlab board — version r1
+ * Hardware: uc-Microlab board â€” version r1
  *
  * Description:
  *   Minimal, portable UART HAL for AVR (ATmega) and other platforms.
@@ -13,7 +13,8 @@
  *
  * Public API (examples of functions that should be declared/implemented):
  *   void HAL_UART_Init(unsigned int baud_rate);
- *   void HAL_UART_Transmit(uint8_t data);
+ *   void HAL_UART_Transmit(unsigned char data);
+ *   void HAL_UART_Send(unsigned char* msg, size_t len_msg);
  *
  * Usage:
  *   - Include the header in your sources: #include "uart-hal.h"
@@ -32,7 +33,7 @@
  *
  * License:
  *   SPDX-License-Identifier: MIT
- *   This file is licensed under the MIT License — see the repository LICENSE file
+ *   This file is licensed under the MIT License â€” see the repository LICENSE file
  *   for full terms and copyright information.
  *
  * Change log:
@@ -43,7 +44,10 @@
 #ifndef UART_HAL_H
 #define UART_HAL_H
 
+#include <stddef.h>
+
 void HAL_UART_Init(unsigned int baud_rate);
 void HAL_UART_Transmit(unsigned char data);
+void HAL_UART_Send(unsigned char* msg, size_t len_msg);
 
 #endif
