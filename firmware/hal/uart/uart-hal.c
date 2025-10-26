@@ -1,11 +1,3 @@
-/*
- * uart-hal.c
- * Minimal UART HAL implementation for ATmega328P (USART0)
- *
- * uc-Microlab — version r1
- * License: MIT
- */
-
 #include "uart-hal.h"
 
 #ifndef F_CPU
@@ -37,5 +29,9 @@ void HAL_UART_Transmit(unsigned char data)
 	
 	// Copying the data to be transmitted
 	UDR0 = data;
+}
 
+void HAL_UART_Send(unsigned char* msg, size_t len_msg)
+{
+	for(int i = 0; i < len_msg; ++i) HAL_UART_Transmit(msg[i]);
 }
