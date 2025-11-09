@@ -1,10 +1,10 @@
 /*
- * uc-Microlab — PORT HAL (header comment)
+ * uc-Microlab â€” PORT HAL 
  * File: port-hal.h
  *
  * Project: uc-MicroLab
  * Component: PORT Hardware Abstraction Layer (HAL)
- * Hardware: uc-MicroLab board — version r1 (AVR/ATmega) and other platforms
+ * Hardware: uc-MicroLab board â€” version r1 (AVR/ATmega) and other platforms
  *
  * Description:
  *   Minimal, portable digital port/pin HAL for small microcontroller projects.
@@ -61,7 +61,7 @@
  *
  * License:
  *   SPDX-License-Identifier: MIT
- *   This file is licensed under the MIT License — see the repository LICENSE file
+ *   This file is licensed under the MIT License â€” see the repository LICENSE file
  *   for full terms and copyright information.
  *
  * Change log:
@@ -96,4 +96,5 @@ void HAL_Port_Write(volatile unsigned char* port, unsigned char pin, unsigned ch
 unsigned char HAL_Port_Read(volatile unsigned char* pinx, unsigned char pin)
 {
 	return ((*pinx & (1 << pin)) ? HAL_PORT_LEVEL_HIGH : HAL_PORT_LEVEL_LOW);
+
 }
