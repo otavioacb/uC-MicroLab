@@ -1,5 +1,5 @@
 /*
- * uc-Microlab — UART HAL (header comment)
+ * uc-Microlab — UART HAL
  * File: uart-hal.h / uart-hal.c
  *
  * Project: uc-Microlab
@@ -77,4 +77,5 @@ void HAL_UART_Send(unsigned char* msg, size_t len_msg)
 {
 	for(int i = 0; i < len_msg; ++i) HAL_UART_Transmit(msg[i]);
 }
+
 
