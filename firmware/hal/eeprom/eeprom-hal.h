@@ -1,6 +1,6 @@
 /*
  * uc-Microlab — EEPROM HAL
- * File: eeprom-hal.h
+ * File: eeprom-hal.h / eeprom-hal.c
  *
  * Project: uc-MicroLab
  * Component: EEPROM Hardware Abstraction Layer (HAL)
