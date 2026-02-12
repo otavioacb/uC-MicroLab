@@ -1,6 +1,6 @@
 /*
  * uc-Microlab — ADC HAL
- * File: adc-hal.h
+ * File: adc-hal.h / adc-hal.c
  *
  * Project: uc-MicroLab
  * Component: ADC Hardware Abstraction Layer (HAL)
