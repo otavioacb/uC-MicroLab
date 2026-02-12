@@ -1,6 +1,6 @@
 /*
  * uc-Microlab — PWM HAL
- * File: pwm-hal.h
+ * File: pwm-hal.h / pwm-hal.c
  *
  * Project: uc-MicroLab
  * Component: PWM Hardware Abstraction Layer (HAL)
