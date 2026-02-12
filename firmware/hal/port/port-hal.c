@@ -1,6 +1,6 @@
 /*
  * uc-Microlab — PORT HAL 
- * File: port-hal.h
+ * File: port-hal.h / port-hal.c
  *
  * Project: uc-MicroLab
  * Component: PORT Hardware Abstraction Layer (HAL)
@@ -98,3 +98,4 @@ unsigned char HAL_Port_Read(volatile unsigned char* pinx, unsigned char pin)
 	return ((*pinx & (1 << pin)) ? HAL_PORT_LEVEL_HIGH : HAL_PORT_LEVEL_LOW);
 
 }
+
