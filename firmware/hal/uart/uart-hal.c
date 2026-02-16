@@ -15,6 +15,10 @@
  *   void HAL_UART_Init(unsigned int baud_rate);
  *   void HAL_UART_Transmit(unsigned char data);
  *   void HAL_UART_Send(unsigned char* msg, size_t len_msg);
+ *   unsigned char HAL_UART_Receive(void);
+ *   unsigned char HAL_UART_Read(unsigned char* buf, size_t len);
+ *   unsigned char HAL_UART_Available();
+ *   void HAL_UART_Flush(void);
  *
  * Usage:
  *   - Include the header in your sources: #include "uart-hal.h"
@@ -38,8 +42,11 @@
  *
  * Change log:
  *   2025-10-19  v0.1  Initial header for uc-Microlab UART HAL
+ *   2026-02-16  v0.2  Added receive functions: HAL_UART_Receive, HAL_UART_Read, HAL_UART_Available, HAL_UART_Flush
+ *                     Added inline comments for better code documentation
  *
  */
+
 #include "uart-hal.h"
 
 #ifndef F_CPU
@@ -63,7 +70,7 @@ void HAL_UART_Init(unsigned int baud_rate)
 void HAL_UART_Transmit(unsigned char data)
 {
 	while(!(UCSR0A & (1 << UDRE0)));
-
+	
 	UDR0 = data;
 }
 
@@ -72,5 +79,26 @@ void HAL_UART_Send(unsigned char* msg, size_t len_msg)
 	for(int i = 0; i < len_msg; ++i) HAL_UART_Transmit(msg[i]);
 }
 
+unsigned char HAL_UART_Receive(void)
+{
+	while(!(UCSR0A & (1 << RXC0)));
+	
+	return UDR0;
+}
 
+unsigned char HAL_UART_Read(unsigned char* buf, size_t len)
+{
+	for(int i = 0; i < len; i++) buf[i] = HAL_UART_Receive();
+}
 
+unsigned char HAL_UART_Available()
+{
+	return (UCSR0A & (1 << RXC0));
+}
+
+void HAL_UART_Flush(void)
+{
+	unsigned char rx;
+	
+	while(UCSR0A & (1 << RXC0)) rx = UDR0;
+}
