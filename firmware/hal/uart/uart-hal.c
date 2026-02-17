@@ -88,7 +88,7 @@ unsigned char HAL_UART_Receive(void)
 
 unsigned char HAL_UART_Read(unsigned char* buf, size_t len)
 {
-	for(int i = 0; i < len; i++) buf[i] = HAL_UART_Receive();
+	for(int i = 0; i < len; ++i) buf[i] = HAL_UART_Receive();
 }
 
 unsigned char HAL_UART_Available()
@@ -102,3 +102,4 @@ void HAL_UART_Flush(void)
 	
 	while(UCSR0A & (1 << RXC0)) rx = UDR0;
 }
+
